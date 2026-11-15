@@ -82,7 +82,28 @@
     return art;
   }
 
+  // Fills <section data-week-section> from data/week.js, and keeps it hidden when there are no tracks.
+  function drawWeek() {
+    var week = window.WEEK || {};
+    var tracks = (week.tracks || []).slice(0, 10);
+    var section = document.querySelector('[data-week-section]');
+    if (!section || !tracks.length) return;
+    var ol = el('ol', 'setlist');
+    ol.setAttribute('aria-label', 'Songs played most this week');
+    tracks.forEach(function (s, i) { ol.appendChild(song(s, i + 1)); });
+    var box = section.querySelector('[data-week]');
+    box.textContent = '';
+    box.appendChild(ol);
+    var when = week.updated && new Date(week.updated + 'T00:00:00');
+    var label = section.querySelector('[data-week-date]');
+    if (label && when && !isNaN(when)) {
+      label.textContent = 'Week of ' + when.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+    }
+    section.hidden = false;
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
+    drawWeek();
     var clips = window.CLIPS || [];
     document.querySelectorAll('[data-clips]').forEach(function (box) {
       var tag = box.getAttribute('data-heading') || 'h3';

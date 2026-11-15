@@ -63,3 +63,7 @@ The look was built with the Hallmark design skill (theme: Kiln, recoloured to be
 - Buttons and links are large, with space between them, and show a clear outline when reached by keyboard.
 - Every image needs alt text. Every video needs a text description.
 - Nothing autoplays with sound. Nothing flashes. The intro animation plays once and is switched off for anyone who has asked their device for less motion.
+
+## Playing this week
+
+Edit `data/week.js`: set `updated` to the Monday (YYYY-MM-DD) and list up to ten songs as `"Song name by Artist"`, most played first. Leave `tracks` empty to hide the section. Only publish a list Simone has approved.

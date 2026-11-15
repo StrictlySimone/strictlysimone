@@ -20,6 +20,13 @@ Say only what is true today. Check this on every page, `llms.txt`, JSON-LD and m
 
 When any of these changes, Simone will say so. Then update every page, `llms.txt` and the JSON-LD together.
 
+## Weekly "Playing this week" list
+
+- The list lives in `data/week.js`. Empty `tracks` keeps the section hidden.
+- Never publish a list Simone has not approved. Draft it on a branch, show her the tracks, and wait for a yes.
+- Only use tracks Simone gave you or confirmed. Do not guess her listening.
+- When a list goes live, set `updated` to that Monday and update `<lastmod>` for `/` in `sitemap.xml`.
+
 ## SEO and behind-the-scenes files
 
 These run quietly in the background, so they are easy to forget. Treat them as part of every page change.

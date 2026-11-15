@@ -49,6 +49,7 @@
 <link rel="stylesheet" href="css/style.css">
 <script src="js/site.js" defer></script>
 <script src="data/clips.js"></script>
+<script src="data/week.js"></script>
 <script src="js/clips.js"></script>
 </head>
 <body>
@@ -107,6 +108,13 @@
           <p class="tile__foot"><a class="btn btn--ghost" href="clips.html">See all clips</a></p>
         </div>
       </div>
+    </div>
+  </section>
+  <section class="section section--tight" aria-labelledby="week-h" data-week-section hidden>
+    <div class="container">
+      <h2 id="week-h">Playing this week</h2>
+      <p data-week-date></p>
+      <div data-week></div>
     </div>
   </section>
 </main>
