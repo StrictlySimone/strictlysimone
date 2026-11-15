@@ -11,7 +11,7 @@
 
 window.CLIPS = [
   {
-    title: "Dancehall mashup",
+    title: "Mashup preview",
     description: "A 60 second preview of a mix. The songs play in the order listed.",
     songs: [
       "Toast by Koffee",
