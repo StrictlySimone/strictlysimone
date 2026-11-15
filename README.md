@@ -31,6 +31,10 @@ All clips live in one file: `data/clips.js`. The Home page shows the first clip 
 
 Keep the comma after the closing `}`. The description matters: it is the text version of the video for anyone who cannot see it.
 
+## When you add or change a page
+
+Keep `sitemap.xml` and `llms.txt` in step with the site: every public page has an entry in both (not `404.html`), and a page's `<lastmod>` date in the sitemap changes when the page does. Every web address in those files, and in each page's `<head>`, starts with `https://www.strictlysimone.com`.
+
 ## Where things are
 
 | File | What it is |
@@ -38,19 +42,19 @@ Keep the comma after the closing `}`. The description matters: it is the text ve
 | `index.html` | Home |
 | `clips.html` | Clips |
 | `about.html` | About |
-| `contact.html` | Contact |
+| `privacy.html` | Privacy |
 | `data/clips.js` | The clips list |
 | `js/clips.js` | Draws the clips list on the page |
 | `css/tokens.css` | Every colour, font and size, in one place |
 | `css/base.css`, `css/style.css` | Layout and components |
 | `img/` | Logo, portrait, icons and the link preview image |
 | `fonts/` | Boska and Geist, hosted here |
-| `sitemap.xml`, `robots.txt` | For search engines |
+| `sitemap.xml`, `robots.txt`, `llms.txt` | For search engines and AI assistants |
 | `CNAME` | Tells GitHub the site's domain. Do not delete. |
 
 ## Design
 
-The look was built with the Hallmark design skill (theme: Kiln, recoloured to berry and pink). The stamp at the top of `css/style.css` records the choices.
+The look was built with the Hallmark design skill (theme: Kiln, recoloured to berry and pale blush). The stamp at the top of `css/style.css` records the choices.
 
 ## Accessibility rules for this site
 

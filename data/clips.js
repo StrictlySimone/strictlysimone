@@ -11,8 +11,8 @@
 
 window.CLIPS = [
   {
-    title: "First mix",
-    description: "A 60 second preview of my first mix. The songs play in the order listed.",
+    title: "Dancehall mashup",
+    description: "A 60 second preview of a mix. The songs play in the order listed.",
     songs: [
       "Toast by Koffee",
       "Love Is Wicked by Brick & Lace",

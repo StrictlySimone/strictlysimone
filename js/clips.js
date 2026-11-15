@@ -88,7 +88,7 @@
       var tag = box.getAttribute('data-heading') || 'h3';
       box.textContent = '';
       if (!clips.length) {
-        box.appendChild(el('p', '', 'No clips yet. The first one is on its way.'));
+        box.appendChild(el('p', '', 'No clips here yet. They are on their way.'));
         return;
       }
       var list = box.getAttribute('data-clips') === 'newest' ? clips.slice(0, 1) : clips;

@@ -1,8 +1,9 @@
 /* Hallmark · shape: Long Document · genre: atmospheric · theme: Kiln (deal 3/3, seed woman-personal-weekly-short-fb1f·9db55820·2026-11-15·r0) · redesign: full
- * hero: Stage (/), Banner (/clips.html, /about.html, /contact.html, /404.html) · nav: masthead · footer: mast · imagery: photographs · signature: Simone cut out in front of a pale blush disc, beside the logo that spins like a record · kiln: reduction, ground hue moved to berry, signal moved to a pale blush of the same hue · draw: 1c79d7
+ * hero: Stage (/), Banner (/clips.html, /about.html, /privacy.html, /404.html) · nav: masthead · footer: mast · imagery: photographs · signature: Simone cut out in front of a pale blush disc, beside the logo that spins like a record · kiln: reduction, ground hue moved to berry, signal moved to a pale blush of the same hue · draw: 1c79d7
  * axes: dark/high-contrast-serif/warm · posture: full-palette · contrast: pass · fold: pass · v2.0.0 */
 /* Hallmark · pre-emit critique: P3 H4 E4 S4 R4 V4 · weakest: P, the page has no tagline yet because Simone has not written one; led with her own line about her sound instead */
 /* Hallmark · waive 44c · the portrait is Simone's own photograph, supplied mid-build · the draw dealt Corridor for a words-only page, and her picture is now the strongest real thing, so the hero is a Stage */
+/* Hallmark · dropped contact.html · Simone is not taking bookings yet, so the Contact page and the Book me button are retired until she is */
 /* Hallmark · waive 80 · the figure is Simone's own photograph and her logo inside an SVG frame · the SVG only supplies the round crop and the pink disc behind her; nothing in it is drawn illustration */
 /* Hallmark · waive 79 · the About page holds the portrait and three sentences Simone wrote · the page is short because her bio is not written yet, and the gate forbids filling the space with copy */
 @import url("./tokens.css");
@@ -49,7 +50,7 @@ a:hover { color: var(--color-accent-2); }
 
 /* ---------- Hero ---------- */
 
-.hero__in { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); align-items: center; gap: var(--space-3xl); min-height: calc(100svh - 81px); padding-block: var(--space-xl) var(--space-2xl); }
+.hero__in { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); align-items: center; gap: var(--space-3xl); min-height: min(calc(100svh - 81px), 46rem); padding-block: var(--space-xl) var(--space-2xl); }
 .hero { position: relative; overflow: clip; }
 .hero::before { content: ""; position: absolute; z-index: 0; width: min(70vw, 62rem); aspect-ratio: 1; right: max(-18rem, -22vw); top: -14rem; border-radius: 50%; background: var(--color-paper-2); }
 .hero__in { position: relative; z-index: 1; }
@@ -77,6 +78,7 @@ a:hover { color: var(--color-accent-2); }
 .banner { padding-block: var(--space-3xl) var(--space-2xl); }
 .banner--lead { padding-bottom: 0; }
 .banner--lead + .section { padding-top: var(--section-gap-s); }
+.banner--lead + .section--tight { padding-top: var(--space-2xl); }
 .section--end { padding-bottom: var(--space-2xl); }
 .banner__body { margin-top: var(--space-2xl); }
 .banner .lead { margin-top: var(--space-lg); color: var(--color-ink-2); }
@@ -113,6 +115,31 @@ a:hover { color: var(--color-accent-2); }
 .setlist__a { color: var(--color-ink-2); font-size: var(--text-sm); text-align: right; }
 .release .actions { margin-top: var(--space-xl); }
 
+/* Home grid: the clip, its set list, the song on repeat and the kit, all in one view */
+.grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--space-lg); }
+.grid__clip { display: contents; }
+.grid .release { display: contents; }
+.grid .release__screen { grid-column: 1 / span 4; grid-row: 1 / span 2; width: 100%; height: 100%; aspect-ratio: auto; min-height: 30rem; box-shadow: none; }
+.grid .release__body, .tile { background: var(--color-paper-2); color: var(--color-ink); border-radius: var(--radius-card); padding: var(--space-xl); }
+.grid .release__body { grid-column: 5 / span 8; }
+.grid .release__title { font-size: var(--text-section); }
+.grid .setlist { margin-top: var(--space-lg); border-bottom: 0; }
+.grid .setlist li { padding-block: var(--space-sm); }
+.grid .setlist li:hover { background: var(--color-paper-3); }
+.tile--repeat { grid-column: 5 / span 5; }
+.tile--kit { grid-column: 10 / span 3; display: flex; flex-direction: column; }
+.tile h3 { font-size: var(--text-2xl); line-height: 1.1; }
+.tile h3 + p { margin-top: var(--space-sm); color: var(--color-ink-2); }
+.tile .player { margin-top: var(--space-lg); border-radius: var(--radius-well); }
+.tile__foot { margin-top: auto; padding-top: var(--space-lg); }
+.tile--kit .btn { padding-inline: var(--space-lg); }
+@media (max-width: 76rem) and (min-width: 60.01rem) {
+  .tile--repeat { grid-column: 5 / span 8; }
+  .tile--kit { grid-column: 1 / -1; flex-direction: row; flex-wrap: wrap; align-items: center; gap: var(--space-md) var(--space-xl); }
+  .tile--kit h3 + p { margin-top: 0; }
+  .tile__foot { margin: 0 0 0 auto; padding-top: 0; }
+}
+
 /* On repeat */
 .repeat { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-3xl); align-items: center; }
 .player { aspect-ratio: 16 / 9; border-radius: var(--radius-card); overflow: hidden; background: var(--color-screen); }
@@ -128,6 +155,10 @@ a:hover { color: var(--color-accent-2); }
 .prose h1 { margin-bottom: var(--space-xl); }
 .prose p { font-size: var(--text-lead); line-height: 1.5; max-width: 46ch; }
 .prose p + p { margin-top: var(--space-lg); }
+.prose--page h2 { font-size: var(--text-2xl); margin-top: var(--space-2xl); }
+.prose--page h2:first-child { margin-top: 0; }
+.prose--page h2 + p, .prose--page h1 + p { margin-top: var(--space-md); }
+.prose--page p { font-size: var(--text-md); max-width: 60ch; }
 
 /* ---------- Footer ---------- */
 
@@ -147,6 +178,9 @@ a:hover { color: var(--color-accent-2); }
   .hero__in { grid-template-columns: minmax(0, 1fr); gap: var(--space-xl); min-height: 0; padding-block: var(--space-2xl); }
   .portrait { width: min(100%, 24rem); }
   .release, .repeat, .about { grid-template-columns: minmax(0, 1fr); gap: var(--space-xl); }
+  .grid .release__screen, .grid .release__body, .tile--repeat, .tile--kit { grid-column: 1 / -1; grid-row: auto; }
+  .grid .release__screen { min-height: 0; height: auto; aspect-ratio: 9 / 16; max-height: none; width: min(100%, 22rem); margin-inline: auto; }
+  .grid .release__body, .tile { padding: var(--space-lg); }
   .setlist li { grid-template-columns: 2rem minmax(0, 1fr); }
   .setlist__a { grid-column: 2; text-align: left; }
   .foot__mark { gap: var(--space-md); }

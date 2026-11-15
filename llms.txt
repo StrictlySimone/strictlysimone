@@ -1,0 +1,10 @@
+# Strictly Simone
+
+> Strictly Simone is a DJ who mixes short mashup clips at home on a Denon DJ SC LIVE 4 and posts one a week on Instagram. The sound is dancehall riddims with surprise pop, and 90s and 00s vocals.
+
+## Pages
+
+- [Home](https://www.strictlysimone.com/): The newest clip with its set list.
+- [Clips](https://www.strictlysimone.com/clips.html): Every clip, newest first, with the songs in each one.
+- [About](https://www.strictlysimone.com/about.html): Who Simone is and how she mixes.
+- [Privacy](https://www.strictlysimone.com/privacy.html): What the site does and does not collect.
