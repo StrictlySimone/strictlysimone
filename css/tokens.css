@@ -12,7 +12,7 @@
   --dur-micro: 120ms; --dur-short: 220ms; --dur-long: 420ms;
   --container: 1280px; --gutter: 64px; --gap-columns: 32px; --section-gap-s: 120px; --section-gap: 144px; --section-gap-l: 176px;
   --color-paper: oklch(20% 0.055 350); --color-paper-2: oklch(24.5% 0.06 350); --color-paper-3: oklch(29% 0.065 350);
-  --color-screen: oklch(13% 0.035 350);
+  --color-screen: oklch(13% 0.035 350); --color-blush: oklch(90% 0.04 350);
   --color-ink: oklch(95% 0.02 85); --color-ink-2: oklch(89% 0.03 40); --color-muted: oklch(82% 0.04 10);
   --color-rule: oklch(96% 0.01 80 / 0.18);
   --color-accent: oklch(72% 0.21 328); --color-accent-2: oklch(80% 0.15 330); --color-accent-ink: oklch(16% 0.04 350); --color-focus: oklch(90% 0.09 330);

@@ -46,6 +46,11 @@
       img.alt = 'Thumbnail for ' + clip.title;
       screen.appendChild(img);
     } else {
+      screen.className += ' release__screen--wait';
+      var mark = document.createElement('img');
+      mark.src = (document.documentElement.getAttribute('data-root') || '') + 'img/logo.png';
+      mark.alt = '';
+      screen.appendChild(mark);
       screen.appendChild(el('p', 'release__wait', 'Video coming soon'));
     }
     art.appendChild(screen);
