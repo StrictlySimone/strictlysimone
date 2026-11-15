@@ -13,22 +13,26 @@
   --ink: #fbf3ff;     /* text, 18:1 on the background */
   --soft: #d8cde4;    /* quieter text, 12.9:1 */
   --pink: #e66be6;    /* accent, 7.1:1 */
-  --glow: 0 0 14px rgb(230 107 230 / 0.45);
+  --pink-dim: rgb(230 107 230 / 0.45);
+  --screen: #07050a;  /* behind videos, darker than the page */
+  --glow: 0 0 14px var(--pink-dim);
   --pad: clamp(1.25rem, 5vw, 3.5rem);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; overflow-x: clip; }
 
 body {
   margin: 0;
+  overflow-x: clip;
   background: var(--bg);
   color: var(--ink);
   font: 500 1.25rem/1.65 "Montserrat", system-ui, sans-serif; /* 20px body text */
 }
 
-h1, h2, h3 { font-weight: 800; line-height: 1.1; margin: 0; }
+h1, h2, h3 { font-weight: 800; line-height: 1.1; margin: 0; text-wrap: balance; overflow-wrap: break-word; min-width: 0; }
+h3 { font-size: clamp(1.75rem, 4vw, 2.25rem); }
 h1 { font-size: clamp(2.75rem, 9vw, 6rem); letter-spacing: -0.01em; }
 h2 { font-size: clamp(2rem, 5vw, 3rem); }
 p { margin: 0; }
@@ -84,7 +88,7 @@ main { max-width: 72rem; margin: 0 auto; padding: 0 var(--pad); }
 .lede { margin-top: 1.5rem; max-width: 36rem; font-size: clamp(1.35rem, 2.6vw, 1.75rem); line-height: 1.45; color: var(--soft); }
 
 .block { padding: clamp(2rem, 6vw, 4rem) 0; }
-.block + .block { border-top: 1px solid rgb(230 107 230 / 0.45); }
+.block + .block { border-top: 1px solid var(--pink-dim); }
 .block h2 + p { margin-top: 1rem; }
 .prose p { max-width: 38rem; }
 .prose p + p { margin-top: 1.5rem; }
@@ -100,16 +104,18 @@ main { max-width: 72rem; margin: 0 auto; padding: 0 var(--pad); }
   border: 2px solid var(--pink); border-radius: 999px; box-shadow: var(--glow);
 }
 .btn:hover { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.btn:active, .top nav a:active { transform: translateY(2px); box-shadow: none; }
 
 /* ---------- Clips ---------- */
 
+.newest { margin-top: 2rem; }
 .clip { display: grid; gap: 2rem; }
 
 /* Tall phone-shaped frame. Never wider than a phone, never taller than the screen. */
 .frame {
   aspect-ratio: 9 / 16; width: 100%; max-width: min(24rem, calc(80vh * 9 / 16));
   border: 2px solid var(--pink); border-radius: 1.5rem; box-shadow: var(--glow);
-  overflow: hidden; display: grid; place-items: center; background: #000;
+  overflow: hidden; display: grid; place-items: center; background: var(--screen);
 }
 .frame video, .frame img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .frame-note { font-weight: 700; text-transform: uppercase; letter-spacing: 0.22em; text-align: center; padding: 1rem; color: var(--soft); }
@@ -136,7 +142,7 @@ main { max-width: 72rem; margin: 0 auto; padding: 0 var(--pad); }
 .wide-video {
   margin-top: 2rem; max-width: 48rem; aspect-ratio: 16 / 9;
   border: 2px solid var(--pink); border-radius: 1.5rem; box-shadow: var(--glow);
-  overflow: hidden; background: #000;
+  overflow: hidden; background: var(--screen);
 }
 .wide-video iframe { width: 100%; height: 100%; border: 0; display: block; }
 
@@ -144,5 +150,5 @@ main { max-width: 72rem; margin: 0 auto; padding: 0 var(--pad); }
 
 .foot {
   margin-top: clamp(2rem, 6vw, 4rem); padding: 2rem var(--pad);
-  border-top: 1px solid rgb(230 107 230 / 0.45); color: var(--soft); font-size: 1.125rem;
+  border-top: 1px solid var(--pink-dim); color: var(--soft); font-size: 1.125rem;
 }
