@@ -10,20 +10,4 @@
 // tiktok       Link to the clip on TikTok, or "".
 // instagram    Link to the clip on Instagram, or "".
 
-window.CLIPS = [
-  {
-    title: "Mashup preview",
-    description: "A 60 second preview of a mix. The songs play in the order listed.",
-    songs: [
-      { text: "Toast by Koffee", url: "https://www.youtube.com/watch?v=p8HoEvDh70Y" },
-      { text: "Love Is Wicked by Brick & Lace", url: "https://www.youtube.com/watch?v=JNjO0Busqog" },
-      { text: "Sorry by Justin Bieber", url: "https://www.youtube.com/results?search_query=Justin+Bieber+Sorry+official+video" },
-      { text: "Get Busy by Sean Paul", url: "https://www.youtube.com/watch?v=oPQ3o14ksaM" },
-      { text: "No Letting Go by Wayne Wonder", url: "https://www.youtube.com/watch?v=QV6m2r0NIkA" }
-    ],
-    video: "",
-    poster: "",
-    tiktok: "",
-    instagram: ""
-  }
-];
+window.CLIPS = [];

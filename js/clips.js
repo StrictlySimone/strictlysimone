@@ -125,7 +125,13 @@
       var tag = box.getAttribute('data-heading') || 'h3';
       box.textContent = '';
       if (!clips.length) {
-        box.appendChild(el('p', '', 'No clips here yet. They are on their way.'));
+        if (box.getAttribute('data-clips') === 'newest') {
+          var grid = box.closest('.grid');
+          if (grid) grid.classList.add('grid--no-clips');
+          box.remove();
+        } else {
+          box.appendChild(el('p', '', 'There are no clips here right now.'));
+        }
         return;
       }
       var list = box.getAttribute('data-clips') === 'newest' ? clips.slice(0, 1) : clips;
