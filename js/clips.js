@@ -79,16 +79,21 @@
 
     var links = [['tiktok', 'Watch on TikTok'], ['instagram', 'Watch on Instagram']]
       .filter(function (l) { return clip[l[0]]; });
-    if (links.length) {
-      var p = el('p', 'actions');
-      links.forEach(function (l) {
-        var a = el('a', 'btn btn--ghost', l[1]);
-        a.href = clip[l[0]];
-        a.setAttribute('aria-label', l[1] + ': ' + clip.title);
-        p.appendChild(a);
-      });
-      body.appendChild(p);
-    }
+    var p = el('p', 'actions');
+    links.forEach(function (l) {
+      var a = el('a', 'btn btn--ghost', l[1]);
+      a.href = clip[l[0]];
+      a.setAttribute('aria-label', l[1] + ': ' + clip.title);
+      p.appendChild(a);
+    });
+    var share = el('button', 'btn btn--ghost', 'Share');
+    share.type = 'button';
+    share.hidden = true;
+    share.setAttribute('data-share', '');
+    share.setAttribute('data-share-title', clip.title + ' | Strictly Simone');
+    share.setAttribute('aria-label', 'Share ' + clip.title);
+    p.appendChild(share);
+    body.appendChild(p);
     art.appendChild(body);
     return art;
   }
@@ -126,5 +131,6 @@
       var list = box.getAttribute('data-clips') === 'newest' ? clips.slice(0, 1) : clips;
       list.forEach(function (c) { box.appendChild(card(c, tag)); });
     });
+    if (window.revealShare) window.revealShare();
   });
 })();

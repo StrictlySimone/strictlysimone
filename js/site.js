@@ -17,29 +17,46 @@
   });
 })();
 
-// "Share this site": the phone's share sheet where there is one, otherwise copy the link.
+// Share buttons ([data-share]): the phone's share sheet where there is one, otherwise copy the link.
+// Optional data-share-title and data-share-url override the page title and canonical URL.
 (function () {
-  document.addEventListener('DOMContentLoaded', function () {
-    var canShare = !!navigator.share;
-    var canCopy = !!(navigator.clipboard && navigator.clipboard.writeText);
+  var canShare = !!navigator.share;
+  var canCopy = !!(navigator.clipboard && navigator.clipboard.writeText);
+  var status;
+
+  function announce(text) {
+    if (!status) {
+      status = document.createElement('div');
+      status.className = 'visually-hidden';
+      status.setAttribute('role', 'status');
+      document.body.appendChild(status);
+    }
+    status.textContent = text;
+  }
+
+  // Buttons start hidden and only show when sharing can work. Called again after clips are drawn.
+  window.revealShare = function () {
     if (!canShare && !canCopy) return;
+    document.querySelectorAll('[data-share][hidden]').forEach(function (b) { b.hidden = false; });
+  };
+
+  document.addEventListener('DOMContentLoaded', window.revealShare);
+
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest && e.target.closest('[data-share]');
+    if (!btn) return;
     var canonical = document.querySelector('link[rel="canonical"]');
-    var url = canonical ? canonical.href : location.href;
-    document.querySelectorAll('[data-share]').forEach(function (btn) {
-      var status = btn.parentNode.querySelector('[data-share-status]');
-      var label = btn.textContent;
-      btn.hidden = false;
-      btn.addEventListener('click', function () {
-        if (canShare) {
-          navigator.share({ title: document.title, url: url }).catch(function () {});
-          return;
-        }
-        navigator.clipboard.writeText(url).then(function () {
-          btn.textContent = 'Link copied';
-          if (status) status.textContent = 'Link copied';
-          setTimeout(function () { btn.textContent = label; if (status) status.textContent = ''; }, 2500);
-        }).catch(function () {});
-      });
-    });
+    var url = btn.getAttribute('data-share-url') || (canonical ? canonical.href : location.href);
+    var title = btn.getAttribute('data-share-title') || document.title;
+    if (canShare) {
+      navigator.share({ title: title, url: url }).catch(function () {});
+      return;
+    }
+    var label = btn.textContent;
+    navigator.clipboard.writeText(url).then(function () {
+      btn.textContent = 'Link copied';
+      announce('Link copied');
+      setTimeout(function () { btn.textContent = label; announce(''); }, 2500);
+    }).catch(function () {});
   });
 })();
