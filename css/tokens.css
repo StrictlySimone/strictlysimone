@@ -15,7 +15,7 @@
   --color-screen: oklch(13% 0.035 350); --color-blush: oklch(90% 0.04 350);
   --color-ink: oklch(95% 0.02 85); --color-ink-2: oklch(89% 0.03 40); --color-muted: oklch(82% 0.04 10);
   --color-rule: oklch(96% 0.01 80 / 0.18);
-  --color-accent: oklch(72% 0.21 328); --color-accent-2: oklch(80% 0.15 330); --color-accent-ink: oklch(16% 0.04 350); --color-focus: oklch(90% 0.09 330);
+  --color-accent: oklch(90% 0.04 350); --color-accent-2: oklch(96% 0.02 350); --color-accent-ink: oklch(16% 0.04 350); --color-focus: oklch(90% 0.09 330);
   --font-display: "Boska", "Iowan Old Style", Georgia, serif; --font-body: "Geist", ui-sans-serif, system-ui, sans-serif;
   --radius-card: 28px; --radius-well: 16px; --radius-pill: 999px; --rule-hair: 1px;
   --shadow-card: 0 50px 90px -30px oklch(10% 0.03 350 / 0.6);

@@ -1,5 +1,5 @@
 /* Hallmark · shape: Long Document · genre: atmospheric · theme: Kiln (deal 3/3, seed woman-personal-weekly-short-fb1f·9db55820·2026-11-15·r0) · redesign: full
- * hero: Stage (/), Banner (/clips.html, /about.html, /contact.html, /404.html) · nav: masthead · footer: mast · imagery: photographs · signature: Simone cut out in front of a pale blush disc, beside the logo that spins like a record · kiln: reduction, ground hue moved to berry, signal moved to the brand pink · draw: 1c79d7
+ * hero: Stage (/), Banner (/clips.html, /about.html, /contact.html, /404.html) · nav: masthead · footer: mast · imagery: photographs · signature: Simone cut out in front of a pale blush disc, beside the logo that spins like a record · kiln: reduction, ground hue moved to berry, signal moved to a pale blush of the same hue · draw: 1c79d7
  * axes: dark/high-contrast-serif/warm · posture: full-palette · contrast: pass · fold: pass · v2.0.0 */
 /* Hallmark · pre-emit critique: P3 H4 E4 S4 R4 V4 · weakest: P, the page has no tagline yet because Simone has not written one; led with her own line about her sound instead */
 /* Hallmark · waive 44c · the portrait is Simone's own photograph, supplied mid-build · the draw dealt Corridor for a words-only page, and her picture is now the strongest real thing, so the hero is a Stage */
@@ -108,7 +108,7 @@ a:hover { color: var(--color-accent-2); }
 .setlist li { transition: background-color var(--dur-short) var(--ease-out); }
 .setlist li:hover { background: var(--color-paper-2); }
 .setlist li { display: grid; padding-inline: var(--space-sm); grid-template-columns: 2.5rem minmax(0, 1fr) auto; align-items: baseline; gap: var(--space-md); padding-block: var(--space-md); border-top: var(--rule-hair) solid var(--color-rule); }
-.setlist__n { font-family: var(--font-display); font-weight: var(--display-weight); font-size: var(--text-title); color: var(--color-accent-2); font-variant-numeric: lining-nums tabular-nums; }
+.setlist__n { font-family: var(--font-display); font-weight: var(--display-weight); font-size: var(--text-title); color: var(--color-accent); font-variant-numeric: lining-nums tabular-nums; }
 .setlist__t { font-family: var(--font-display); font-weight: var(--display-weight); font-size: clamp(1.6rem, 1.4vw + 1.1rem, 2.4rem); letter-spacing: var(--tracking-display); line-height: 1.15; }
 .setlist__a { color: var(--color-ink-2); font-size: var(--text-sm); text-align: right; }
 .release .actions { margin-top: var(--space-xl); }
