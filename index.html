@@ -3,12 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Draft: remove this noindex line at launch -->
-<meta name="robots" content="noindex">
+<link rel="canonical" href="https://www.strictlysimone.com/">
 <title>Strictly Simone | DJ mashup clips</title>
 <meta name="description" content="Strictly Simone. Short mashup clips mixed at home. Dancehall riddims with surprise pop, and 90s and 00s vocals.">
 <meta name="color-scheme" content="dark">
-<link rel="preload" href="fonts/montserrat-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<meta property="og:title" content="Strictly Simone | DJ mashup clips">
+<meta property="og:description" content="Strictly Simone. Short mashup clips mixed at home. Dancehall riddims with surprise pop, and 90s and 00s vocals.">
+<meta property="og:image" content="https://www.strictlysimone.com/img/share.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="img/icon-180.png">
+<link rel="preload" href="fonts/boska-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/style.css">
 <script src="data/clips.js"></script>
 <script src="js/clips.js"></script>
@@ -16,13 +22,14 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<header class="top">
-  <a class="mark" href="index.html">Strictly Simone</a>
-  <nav aria-label="Main">
-    <ul>
-      <li><a href="index.html" aria-current="page">Home</a></li>
+<header class="mast">
+  <nav class="container mast__in" aria-label="Main">
+    <ul class="mast__left">
       <li><a href="clips.html">Clips</a></li>
       <li><a href="about.html">About</a></li>
+    </ul>
+    <a class="brand" href="index.html" aria-current="page"><img class="spin" src="img/logo.png" alt="" width="44" height="44">Strictly Simone</a>
+    <ul class="mast__right">
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
@@ -30,28 +37,65 @@
 
 <main id="main">
   <section class="hero">
-    <h1>Strictly Simone</h1>
-    <p class="lede">I mix short mashup clips at home and post one a week.</p>
-  </section>
-
-  <section class="block" aria-labelledby="newest-h">
-    <h2 id="newest-h">Newest clip</h2>
-    <div class="newest" data-clips="newest" data-heading="h3"><noscript><p>The clips list needs JavaScript switched on to show.</p></noscript></div>
-    <p class="more"><a class="btn" href="clips.html">See all clips</a></p>
-  </section>
-
-  <section class="block" aria-labelledby="repeat-h">
-    <h2 id="repeat-h">On repeat</h2>
-    <p>My favourite song right now is Playtime (Remix) by Shenseea and Digga D.</p>
-    <div class="wide-video">
-      <iframe src="https://www.youtube-nocookie.com/embed/Pm-RsyKloTY" title="Playtime (Remix) by Shenseea and Digga D, official audio on YouTube" loading="lazy" allow="encrypted-media; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="container hero__in">
+      <div>
+        <h1>Dancehall riddims with surprise pop.</h1>
+        <p class="lead">I mix short mashup clips at home and post one a week.</p>
+        <p class="actions">
+          <a class="btn" href="#first-mix">Watch the newest clip</a>
+          <a class="btn btn--ghost" href="contact.html">Book me</a>
+        </p>
+      </div>
+      <figure class="portrait">
+        <svg viewBox="0 0 760 690" role="img" aria-label="Simone smiling. She wears clear framed glasses and a pleated grey shirt, with long curly hair over one shoulder.">
+          <defs><clipPath id="porthole"><rect x="0" y="0" width="760" height="370"/><circle cx="380" cy="370" r="320"/></clipPath></defs>
+          <circle class="portrait__disc" cx="380" cy="370" r="320"/>
+          <g clip-path="url(#porthole)"><image class="portrait__photo" href="img/simone.webp" x="-70" y="-100" width="896" height="1193"/></g>
+          <g class="portrait__badge" aria-hidden="true"><circle cx="118" cy="592" r="80"/><image href="img/logo.png" x="62" y="536" width="112" height="112"/></g>
+        </svg>
+      </figure>
     </div>
-    <p class="note">This is the official audio on YouTube. It only plays when you press play.</p>
+  </section>
+
+  <section class="section section--tight" id="first-mix" aria-labelledby="newest-h">
+    <div class="container">
+      <h2 class="visually-hidden" id="newest-h">Newest clip</h2>
+      <div data-clips="newest" data-heading="h3"><noscript><p>The clips list needs JavaScript switched on to show.</p></noscript></div>
+      <p class="more"><a class="btn btn--ghost" href="clips.html">See all clips</a></p>
+    </div>
+  </section>
+
+  <section class="section band" aria-labelledby="repeat-h">
+    <div class="container repeat">
+      <div>
+        <h2 id="repeat-h">On repeat</h2>
+        <p>My favourite song right now is Playtime (Remix) by Shenseea and Digga D.</p>
+        <p class="note">This is the official audio on YouTube. It only plays when you press play.</p>
+      </div>
+      <div class="player">
+        <iframe src="https://www.youtube-nocookie.com/embed/Pm-RsyKloTY" title="Playtime (Remix) by Shenseea and Digga D, official audio on YouTube" loading="lazy" allow="encrypted-media; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="section statement">
+    <div class="container">
+      <h2>Mixed at home on a Denon DJ SC LIVE 4.</h2>
+      <p>I post one clip a week on TikTok and Instagram. <a href="about.html">More about me</a></p>
+    </div>
   </section>
 </main>
 
 <footer class="foot">
-  <p>&copy; 2026 Strictly Simone</p>
+  <div class="container">
+    <a class="foot__mark" href="index.html"><img class="spin" src="img/logo.png" alt="" width="96" height="96">Strictly Simone</a>
+    <ul>
+      <li><a href="clips.html">Clips</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <p class="foot__legal">&copy; 2026 Strictly Simone</p>
+  </div>
 </footer>
 
 </body>

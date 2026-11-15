@@ -40,13 +40,22 @@ Keep the comma after the closing `}`. The description matters: it is the text ve
 | `about.html` | About |
 | `contact.html` | Contact |
 | `data/clips.js` | The clips list |
-| `css/style.css` | Colours, sizes and layout |
-| `fonts/` | Montserrat, hosted here |
+| `js/clips.js` | Draws the clips list on the page |
+| `css/tokens.css` | Every colour, font and size, in one place |
+| `css/base.css`, `css/style.css` | Layout and components |
+| `img/` | Logo, portrait, icons and the link preview image |
+| `fonts/` | Boska and Geist, hosted here |
+| `sitemap.xml`, `robots.txt` | For search engines |
 | `CNAME` | Tells GitHub the site's domain. Do not delete. |
+
+## Design
+
+The look was built with the Hallmark design skill (theme: Kiln, recoloured to berry and pink). The stamp at the top of `css/style.css` records the choices.
 
 ## Accessibility rules for this site
 
-- Dark theme only. Text is at least 18 px with a contrast of 7 to 1 or better.
-- Buttons and links are large, with space between them.
+- Dark theme only: cream text on deep berry, with high contrast.
+- No text smaller than 18 px. Body text is 20 px.
+- Buttons and links are large, with space between them, and show a clear outline when reached by keyboard.
 - Every image needs alt text. Every video needs a text description.
-- Nothing autoplays with sound. Nothing flashes.
+- Nothing autoplays with sound. Nothing flashes. The intro animation plays once and is switched off for anyone who has asked their device for less motion.

@@ -8,10 +8,29 @@
     return e;
   }
 
-  function card(clip, headingTag) {
-    var art = el('article', 'clip');
+  // "Toast by Koffee" becomes a title and an artist.
+  function song(text, n) {
+    var cut = text.lastIndexOf(' by ');
+    var li = el('li');
+    var num = el('span', 'setlist__n', String(n));
+    num.setAttribute('aria-hidden', 'true');
+    li.appendChild(num);
+    if (cut === -1) {
+      li.appendChild(el('span', 'setlist__t', text));
+      return li;
+    }
+    li.appendChild(el('span', 'setlist__t', text.slice(0, cut)));
+    var artist = el('span', 'setlist__a');
+    artist.appendChild(el('span', 'visually-hidden', 'by '));
+    artist.appendChild(document.createTextNode(text.slice(cut + 4)));
+    li.appendChild(artist);
+    return li;
+  }
 
-    var frame = el('div', 'frame');
+  function card(clip, headingTag) {
+    var art = el('article', 'release');
+
+    var screen = el('div', 'release__screen');
     if (clip.video) {
       var v = document.createElement('video');
       v.controls = true;
@@ -20,41 +39,41 @@
       v.src = clip.video;
       if (clip.poster) v.poster = clip.poster;
       v.setAttribute('aria-label', 'Video: ' + clip.title);
-      frame.appendChild(v);
+      screen.appendChild(v);
     } else if (clip.poster) {
       var img = document.createElement('img');
       img.src = clip.poster;
       img.alt = 'Thumbnail for ' + clip.title;
-      frame.appendChild(img);
+      screen.appendChild(img);
     } else {
-      frame.appendChild(el('p', 'frame-note', 'Video coming soon'));
+      screen.appendChild(el('p', 'release__wait', 'Video coming soon'));
     }
-    art.appendChild(frame);
+    art.appendChild(screen);
 
-    var info = el('div', 'clip-info');
-    info.appendChild(el(headingTag, 'clip-title', clip.title));
-    if (clip.description) info.appendChild(el('p', 'clip-desc', clip.description));
+    var body = el('div', 'release__body');
+    body.appendChild(el(headingTag, 'release__title', clip.title));
+    if (clip.description) body.appendChild(el('p', 'release__desc', clip.description));
 
     if (clip.songs && clip.songs.length) {
-      info.appendChild(el('p', 'label', 'Songs in order'));
-      var ol = el('ol', 'songs');
-      clip.songs.forEach(function (s) { ol.appendChild(el('li', '', s)); });
-      info.appendChild(ol);
+      var ol = el('ol', 'setlist');
+      ol.setAttribute('aria-label', 'Songs in order');
+      clip.songs.forEach(function (s, i) { ol.appendChild(song(s, i + 1)); });
+      body.appendChild(ol);
     }
 
     var links = [['tiktok', 'Watch on TikTok'], ['instagram', 'Watch on Instagram']]
       .filter(function (l) { return clip[l[0]]; });
     if (links.length) {
-      var p = el('p', 'watch');
+      var p = el('p', 'actions');
       links.forEach(function (l) {
-        var a = el('a', 'btn', l[1]);
+        var a = el('a', 'btn btn--ghost', l[1]);
         a.href = clip[l[0]];
         a.setAttribute('aria-label', l[1] + ': ' + clip.title);
         p.appendChild(a);
       });
-      info.appendChild(p);
+      body.appendChild(p);
     }
-    art.appendChild(info);
+    art.appendChild(body);
     return art;
   }
 
