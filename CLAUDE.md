@@ -42,6 +42,7 @@ These run quietly in the background, so they are easy to forget. Treat them as p
 
 ## Before you publish
 
+0. Run `python3 scripts/check_head.py` (head tags, one `<h1>`, canonical, sitemap, links, `alt` text). It also runs on GitHub after every push.
 1. Open every changed page at 320, 375, 768 and 1280px wide, in light and dark mode: no sideways scrolling, no console errors.
 2. Run an axe-core scan on every changed page and fix every violation.
 3. Check internal links and image paths resolve, and `sitemap.xml` parses.
