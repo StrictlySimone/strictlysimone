@@ -171,6 +171,9 @@ a:hover { color: var(--color-accent-2); }
 .foot__mark img { width: 1.1em; height: 1.1em; flex: none; }
 .foot ul { list-style: none; margin: var(--space-2xl) 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--space-xs) var(--space-lg); }
 .foot li a { display: inline-flex; align-items: center; min-height: 48px; font-size: var(--text-sm); }
+.foot__share { display: inline-flex; align-items: center; min-height: 48px; padding: 0; border: 0; background: none; color: inherit; font: inherit; font-size: var(--text-sm); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.2em; cursor: pointer; }
+.foot__share[hidden] { display: none; }
+.foot__share:hover { color: var(--color-accent-2); }
 .foot__legal { margin-top: var(--space-lg); color: var(--color-muted); font-size: var(--text-sm); }
 
 /* ---------- Smaller screens ---------- */
