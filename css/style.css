@@ -109,10 +109,13 @@ a:hover { color: var(--color-accent-2); }
 .setlist { list-style: none; margin: var(--space-xl) 0 0; padding: 0; border-bottom: var(--rule-hair) solid var(--color-rule); }
 .setlist li { transition: background-color var(--dur-short) var(--ease-out); }
 .setlist li:hover { background: var(--color-paper-2); }
-.setlist li { display: grid; padding-inline: var(--space-sm); grid-template-columns: 2.5rem minmax(0, 1fr) auto; align-items: baseline; gap: var(--space-md); padding-block: var(--space-md); border-top: var(--rule-hair) solid var(--color-rule); }
+.setlist li { display: grid; padding-inline: var(--space-sm); grid-template-columns: 2.5rem minmax(0, 1fr) auto auto; align-items: baseline; gap: var(--space-md); padding-block: var(--space-md); border-top: var(--rule-hair) solid var(--color-rule); }
 .setlist__n { font-family: var(--font-display); font-weight: var(--display-weight); font-size: var(--text-title); color: var(--color-accent); font-variant-numeric: lining-nums tabular-nums; }
 .setlist__t { font-family: var(--font-display); font-weight: var(--display-weight); font-size: clamp(1.6rem, 1.4vw + 1.1rem, 2.4rem); letter-spacing: var(--tracking-display); line-height: 1.15; }
 .setlist__a { color: var(--color-ink-2); font-size: var(--text-sm); text-align: right; }
+.setlist__p { font-size: var(--text-sm); color: var(--color-ink); text-decoration: underline; text-underline-offset: 0.2em; padding: 0.5rem 0.25rem; margin-block: -0.5rem; }
+.setlist__p::after { content: " \2197"; }
+.setlist__p:hover { color: var(--color-accent); }
 .release .actions { margin-top: var(--space-xl); }
 
 /* Home grid: the clip, its set list, the song on repeat and the kit, all in one view */
@@ -183,6 +186,7 @@ a:hover { color: var(--color-accent-2); }
   .grid .release__body, .tile { padding: var(--space-lg); }
   .setlist li { grid-template-columns: 2rem minmax(0, 1fr); }
   .setlist__a { grid-column: 2; text-align: left; }
+  .setlist__p { grid-column: 2; justify-self: start; margin-left: -0.25rem; }
   .foot__mark { gap: var(--space-md); }
   .hero::before { display: none; }
 }
