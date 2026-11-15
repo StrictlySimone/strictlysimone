@@ -1,6 +1,6 @@
 # Strictly Simone
 
-Static site served by GitHub Pages at **https://www.strictlysimone.com** (see `CNAME`). Simone is a DJ who mixes at home, some of them mashups, with no fixed genre. The site shows no mixes or clips for now: they use other people's songs, so nothing is published without Simone's say-so and a licensed way to host it. Plain hand-written HTML, no build step.
+Static site served by GitHub Pages at **https://www.strictlysimone.com** (see `CNAME`). Simone is a DJ who mixes, some of it mashups, with no fixed genre. The site shows no mixes or clips for now: they use other people's songs, so nothing is published without Simone's say-so and a licensed way to host it. Plain hand-written HTML, no build step.
 
 ## Site rules
 
