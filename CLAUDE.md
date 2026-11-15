@@ -1,6 +1,6 @@
 # Strictly Simone
 
-Static site served by GitHub Pages at **https://www.strictlysimone.com** (see `CNAME`). Simone is a DJ who mixes short clips at home, some of them mashups, with no fixed genre. Plain hand-written HTML, no build step.
+Static site served by GitHub Pages at **https://www.strictlysimone.com** (see `CNAME`). Simone is a DJ who mixes at home, some of them mashups, with no fixed genre. The site shows no mixes or clips for now: they use other people's songs, so nothing is published without Simone's say-so and a licensed way to host it. Plain hand-written HTML, no build step.
 
 ## Site rules
 
@@ -13,7 +13,7 @@ Static site served by GitHub Pages at **https://www.strictlysimone.com** (see `C
 
 Say only what is true today. Check this on every page, `llms.txt`, JSON-LD and metadata.
 
-- **TikTok:** Simone does not post there. Do not mention it or link to it. The `tiktok` field in `data/clips.js` stays empty until Simone says otherwise.
+- **TikTok:** Simone does not post there. Do not mention it or link to it. Do not add a TikTok field or link until Simone says otherwise.
 - **Instagram:** the account is private for now. Do not link to it, and do not imply visitors can follow or watch there, until Simone says it is public.
 - **Bookings:** Simone is not taking bookings. No "book me", "hire", "enquire", "availability", pricing or event-DJ wording, no booking form or button, and no `Offer`, `Event` or `Service` structured data.
 - Do not invent gigs, followers, press, testimonials or numbers.

@@ -1,5 +1,5 @@
 /* Hallmark · shape: Long Document · genre: atmospheric · theme: Kiln (deal 3/3, seed woman-personal-weekly-short-fb1f·9db55820·2026-11-15·r0) · redesign: full
- * hero: Stage (/), Banner (/clips.html, /about.html, /privacy.html, /404.html) · nav: masthead · footer: mast · imagery: photographs · signature: Simone cut out in front of a pale blush disc, beside the logo that spins like a record · kiln: reduction, ground hue moved to berry, signal moved to a pale blush of the same hue · draw: 1c79d7
+ * hero: Stage (/), Banner (/about.html, /privacy.html, /404.html) · nav: masthead · footer: mast · imagery: photographs · signature: Simone cut out in front of a pale blush disc, beside the logo that spins like a record · kiln: reduction, ground hue moved to berry, signal moved to a pale blush of the same hue · draw: 1c79d7
  * axes: dark/high-contrast-serif/warm · posture: full-palette · contrast: pass · fold: pass · v2.0.0 */
 /* Hallmark · pre-emit critique: P3 H4 E4 S4 R4 V4 · weakest: P, the page has no tagline yet because Simone has not written one; led with her own line about her sound instead */
 /* Hallmark · waive 44c · the portrait is Simone's own photograph, supplied mid-build · the draw dealt Corridor for a words-only page, and her picture is now the strongest real thing, so the hero is a Stage */
@@ -94,19 +94,6 @@ a:hover { color: var(--color-accent-2); }
 .section h2 + p { margin-top: var(--space-lg); color: var(--color-ink-2); }
 .more { margin-top: var(--space-2xl); }
 
-/* A clip: the tall video beside its set list */
-.release { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: var(--space-3xl); align-items: center; }
-.release + .release { margin-top: var(--section-gap-s); padding-top: var(--section-gap-s); border-top: var(--rule-hair) solid var(--color-rule); }
-.release__screen { width: min(100%, calc(80svh * 0.5625), 24rem); aspect-ratio: 9 / 16; margin: 0; border-radius: var(--radius-card); overflow: hidden; background: var(--color-screen); color: var(--color-ink); box-shadow: var(--shadow-card); display: grid; place-items: center; }
-.release__screen video, .release__screen img { width: 100%; height: 100%; object-fit: contain; }
-.release__screen--wait { background: var(--color-paper-2); align-content: center; gap: var(--space-lg); }
-.release__screen--wait img { width: 46%; height: auto; margin: 0 auto; object-fit: contain; opacity: 0.9; }
-.release__screen--wait:hover img { animation: turn 3200ms linear infinite; }
-@media (prefers-reduced-motion: reduce) { .release__screen--wait:hover img { animation: none; } }
-.release__wait { color: var(--color-ink-2); font-size: var(--text-sm); text-align: center; padding: var(--space-md); }
-.release__title { font-size: var(--text-section); }
-.release__desc { margin-top: var(--space-md); color: var(--color-ink-2); }
-
 .setlist { list-style: none; margin: var(--space-xl) 0 0; padding: 0; border-bottom: var(--rule-hair) solid var(--color-rule); }
 .setlist li { transition: background-color var(--dur-short) var(--ease-out); }
 .setlist li:hover { background: var(--color-paper-2); }
@@ -117,34 +104,13 @@ a:hover { color: var(--color-accent-2); }
 .setlist__p { font-size: var(--text-sm); color: var(--color-ink); text-decoration: underline; text-underline-offset: 0.2em; padding: 0.5rem 0.25rem; margin-block: -0.5rem; }
 .setlist__p::after { content: " \2197"; }
 .setlist__p:hover { color: var(--color-accent); }
-.release .actions { margin-top: var(--space-xl); }
 
-/* Home grid: the clip, its set list, the song on repeat and the kit, all in one view */
-.grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--space-lg); }
-.grid__clip { display: contents; }
-.grid .release { display: contents; }
-.grid .release__screen { grid-column: 1 / span 4; grid-row: 1 / span 2; width: 100%; height: 100%; aspect-ratio: auto; min-height: 30rem; box-shadow: none; }
-.grid .release__body, .tile { background: var(--color-paper-2); color: var(--color-ink); border-radius: var(--radius-card); padding: var(--space-xl); }
-.grid .release__body { grid-column: 5 / span 8; }
-.grid .release__title { font-size: var(--text-section); }
-.grid .setlist { margin-top: var(--space-lg); border-bottom: 0; }
-.grid .setlist li { padding-block: var(--space-sm); }
-.grid .setlist li:hover { background: var(--color-paper-3); }
-.tile--repeat { grid-column: 5 / span 5; }
-.tile--kit { grid-column: 10 / span 3; display: flex; flex-direction: column; }
-.grid--no-clips .tile--repeat { grid-column: 1 / -1; }
-.grid--no-clips .tile--kit { display: none; }
+/* The song on repeat */
+.tile { background: var(--color-paper-2); color: var(--color-ink); border-radius: var(--radius-card); padding: var(--space-xl); }
+.tile--repeat { max-width: 52rem; }
 .tile h3 { font-size: var(--text-2xl); line-height: 1.1; }
 .tile h3 + p { margin-top: var(--space-sm); color: var(--color-ink-2); }
 .tile .player { margin-top: var(--space-lg); border-radius: var(--radius-well); }
-.tile__foot { margin-top: auto; padding-top: var(--space-lg); }
-.tile--kit .btn { padding-inline: var(--space-lg); }
-@media (max-width: 76rem) and (min-width: 60.01rem) {
-  .tile--repeat { grid-column: 5 / span 8; }
-  .tile--kit { grid-column: 1 / -1; flex-direction: row; flex-wrap: wrap; align-items: center; gap: var(--space-md) var(--space-xl); }
-  .tile--kit h3 + p { margin-top: 0; }
-  .tile__foot { margin: 0 0 0 auto; padding-top: 0; }
-}
 
 /* On repeat */
 .repeat { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-3xl); align-items: center; }
@@ -186,10 +152,8 @@ a:hover { color: var(--color-accent-2); }
   .mast__in > .brand { order: -1; flex-basis: 100%; justify-content: center; }
   .hero__in { grid-template-columns: minmax(0, 1fr); gap: var(--space-xl); min-height: 0; padding-block: var(--space-2xl); }
   .portrait { width: min(100%, 24rem); }
-  .release, .repeat, .about { grid-template-columns: minmax(0, 1fr); gap: var(--space-xl); }
-  .grid .release__screen, .grid .release__body, .tile--repeat, .tile--kit { grid-column: 1 / -1; grid-row: auto; }
-  .grid .release__screen { min-height: 0; height: auto; aspect-ratio: 9 / 16; max-height: none; width: min(100%, 22rem); margin-inline: auto; }
-  .grid .release__body, .tile { padding: var(--space-lg); }
+  .repeat, .about { grid-template-columns: minmax(0, 1fr); gap: var(--space-xl); }
+  .tile { padding: var(--space-lg); }
   .setlist li { grid-template-columns: 2rem minmax(0, 1fr); }
   .setlist__a { grid-column: 2; text-align: left; }
   .setlist__p { grid-column: 2; justify-self: start; margin-left: -0.25rem; }

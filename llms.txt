@@ -1,10 +1,9 @@
 # Strictly Simone
 
-> Strictly Simone is a DJ who mixes short clips at home, some of them mashups. There is no fixed genre: it is whatever she feels like playing at the time, and she just wants to make people smile.
+> Strictly Simone is a DJ who mixes at home, some of them mashups. There is no fixed genre: it is whatever she feels like playing at the time, and she just wants to make people smile.
 
 ## Pages
 
-- [Home](https://www.strictlysimone.com/): The newest clip with its set list.
-- [Clips](https://www.strictlysimone.com/clips.html): Every clip, newest first, with the songs in each one.
+- [Home](https://www.strictlysimone.com/): Simone, and the song she has on repeat.
 - [About](https://www.strictlysimone.com/about.html): Who Simone is and how she mixes.
 - [Privacy](https://www.strictlysimone.com/privacy.html): What the site does and does not collect.

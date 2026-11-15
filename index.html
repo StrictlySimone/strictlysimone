@@ -5,18 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://www.strictlysimone.com/">
 <meta name="robots" content="index, follow">
-<title>Strictly Simone | DJ clips</title>
-<meta name="description" content="Strictly Simone. Short DJ clips mixed at home. Anything goes, whatever I feel like playing.">
+<title>Strictly Simone | DJ mixing at home</title>
+<meta name="description" content="Strictly Simone. A DJ mixing at home. Anything goes, whatever I feel like playing.">
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Strictly Simone">
-<meta property="og:title" content="Strictly Simone | DJ clips">
-<meta property="og:description" content="Strictly Simone. Short DJ clips mixed at home. Anything goes, whatever I feel like playing.">
+<meta property="og:title" content="Strictly Simone | DJ mixing at home">
+<meta property="og:description" content="Strictly Simone. A DJ mixing at home. Anything goes, whatever I feel like playing.">
 <meta property="og:url" content="https://www.strictlysimone.com/">
 <meta property="og:image" content="https://www.strictlysimone.com/img/share.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Strictly Simone | DJ clips">
-<meta name="twitter:description" content="Strictly Simone. Short DJ clips mixed at home. Anything goes, whatever I feel like playing.">
+<meta name="twitter:title" content="Strictly Simone | DJ mixing at home">
+<meta name="twitter:description" content="Strictly Simone. A DJ mixing at home. Anything goes, whatever I feel like playing.">
 <meta name="twitter:image" content="https://www.strictlysimone.com/img/share.png">
 <script type="application/ld+json">
 {
@@ -27,7 +27,7 @@
       "@id": "https://www.strictlysimone.com/#website",
       "name": "Strictly Simone",
       "url": "https://www.strictlysimone.com/",
-      "description": "Short DJ clips mixed at home. Anything goes, whatever I feel like playing.",
+      "description": "A DJ mixing at home. Anything goes, whatever I feel like playing.",
       "inLanguage": "en-GB",
       "publisher": { "@id": "https://www.strictlysimone.com/#simone" }
     },
@@ -50,9 +50,8 @@
 <link rel="preload" href="fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/style.css">
 <script src="js/site.js" defer></script>
-<script src="data/clips.js"></script>
 <script src="data/week.js"></script>
-<script src="js/clips.js"></script>
+<script src="js/week.js"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -60,12 +59,9 @@
 <header class="mast">
   <nav class="container mast__in" aria-label="Main">
     <ul class="mast__left">
-      <li><a href="clips.html">Clips</a></li>
-    </ul>
-    <a class="brand" href="/" aria-current="page"><img class="spin" src="img/logo.png" alt="" width="44" height="44">Strictly Simone</a>
-    <ul class="mast__right">
       <li><a href="about.html">About</a></li>
     </ul>
+    <a class="brand" href="/" aria-current="page"><img class="spin" src="img/logo.png" alt="" width="44" height="44">Strictly Simone</a>
   </nav>
 </header>
 
@@ -75,7 +71,7 @@
       <div>
         <h1>Anything goes. Press play.</h1>
         <p class="actions">
-          <a class="btn" href="#newest-clip">See what is on repeat</a>
+          <a class="btn" href="#on-repeat">See what is on repeat</a>
           <a class="btn btn--ghost" href="about.html">About me</a>
         </p>
       </div>
@@ -90,23 +86,16 @@
     </div>
   </section>
 
-  <section class="section section--tight" id="newest-clip" aria-labelledby="newest-h">
+  <section class="section section--tight" id="on-repeat" aria-labelledby="on-repeat-h">
     <div class="container">
-      <h2 class="visually-hidden" id="newest-h">Favourite song right now</h2>
-      <div class="grid">
-        <div class="grid__clip" data-clips="newest" data-heading="h3"><noscript><p>The clips list needs JavaScript switched on to show.</p></noscript></div>
-        <div class="tile tile--repeat">
-          <h3>On repeat</h3>
-          <p>My favourite song right now is Playtime (Remix) by Shenseea and Digga D.</p>
-          <div class="player">
-            <iframe src="https://www.youtube-nocookie.com/embed/Pm-RsyKloTY" title="Playtime (Remix) by Shenseea and Digga D, official audio on YouTube" loading="lazy" allow="encrypted-media; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </div>
-          <p class="note">Official audio on YouTube. It only plays when you press play.</p>
+      <h2 class="visually-hidden" id="on-repeat-h">Favourite song right now</h2>
+      <div class="tile tile--repeat">
+        <h3>On repeat</h3>
+        <p>My favourite song right now is Playtime (Remix) by Shenseea and Digga D.</p>
+        <div class="player">
+          <iframe src="https://www.youtube-nocookie.com/embed/Pm-RsyKloTY" title="Playtime (Remix) by Shenseea and Digga D, official audio on YouTube" loading="lazy" allow="encrypted-media; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-        <div class="tile tile--kit">
-          <h3>More clips</h3>
-          <p class="tile__foot"><a class="btn btn--ghost" href="clips.html">See all clips</a></p>
-        </div>
+        <p class="note">Official audio on YouTube. It only plays when you press play.</p>
       </div>
     </div>
   </section>
@@ -123,7 +112,6 @@
   <div class="container">
     <a class="foot__mark" href="/"><img class="spin" src="img/logo.png" alt="" width="96" height="96">Strictly Simone</a>
     <ul>
-      <li><a href="clips.html">Clips</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="privacy.html">Privacy</a></li>
       <li><button type="button" class="foot__share" data-share hidden>Share this site</button></li>    </ul>

@@ -34,7 +34,7 @@
     status.textContent = text;
   }
 
-  // Buttons start hidden and only show when sharing can work. Called again after clips are drawn.
+  // Buttons start hidden and only show when sharing can work. Called again after the weekly list is drawn.
   window.revealShare = function () {
     if (!canShare && !canCopy) return;
     document.querySelectorAll('[data-share][hidden]').forEach(function (b) { b.hidden = false; });

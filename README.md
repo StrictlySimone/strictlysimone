@@ -4,32 +4,9 @@ The website for Strictly Simone, served by GitHub Pages at www.strictlysimone.co
 
 It is plain HTML, CSS and a little JavaScript. There is no build step. Anything pushed to the `main` branch goes live in a minute or two.
 
-## How to add a clip
+## Clips
 
-All clips live in one file: `data/clips.js`. The Home page shows the first clip in that file. The Clips page shows all of them.
-
-1. Put the video in the `clips` folder, for example `clips/02-second-mix.mp4`. Use the smaller phone copy. Keep each file well under 100 MB.
-2. If you have a thumbnail, put it in the same folder, for example `clips/02-second-mix.jpg`.
-3. Open `data/clips.js`. Copy the block below and paste it at the **top** of the list, straight after `window.CLIPS = [`.
-4. Fill it in. Leave `""` for anything you do not have yet.
-5. Save, commit and push.
-
-```js
-  {
-    title: "Second mix",
-    description: "One or two plain sentences saying what happens in the video.",
-    songs: [
-      "Song name by Artist",
-      "Song name by Artist"
-    ],
-    video: "clips/02-second-mix.mp4",
-    poster: "clips/02-second-mix.jpg",
-    tiktok: "https://www.tiktok.com/...",
-    instagram: "https://www.instagram.com/..."
-  },
-```
-
-Keep the comma after the closing `}`. The description matters: it is the text version of the video for anyone who cannot see it.
+The site has no clips right now, so there is no Clips page. If Simone wants to publish mixes again, talk it through first: mixes of other people's songs need the right permissions, and the safest route is to embed them from a service that has music licences.
 
 ## When you add or change a page
 
@@ -40,11 +17,10 @@ Keep `sitemap.xml` and `llms.txt` in step with the site: every public page has a
 | File | What it is |
 |---|---|
 | `index.html` | Home |
-| `clips.html` | Clips |
 | `about.html` | About |
 | `privacy.html` | Privacy |
-| `data/clips.js` | The clips list |
-| `js/clips.js` | Draws the clips list on the page |
+| `data/week.js` | The Playing this week list |
+| `js/week.js` | Draws the Playing this week list on the page |
 | `css/tokens.css` | Every colour, font and size, in one place |
 | `css/base.css`, `css/style.css` | Layout and components |
 | `img/` | Logo, portrait, icons and the link preview image |
